@@ -8,12 +8,20 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    //MARK: - Variables
+    let viewModel = ViewModel()
+    
+    //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
+    
+    //MARK: - Actions
+    @IBAction func openPDF(_ sender: UIButton) {
+        let url = "https://www.tutorialspoint.com/swift/swift_tutorial.pdf"
+        viewModel.sendInformationToAPI(url: url)
+    }
 }
+
 
